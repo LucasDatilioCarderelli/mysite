@@ -1,0 +1,48 @@
+body {
+  background-image: url('https://i.pinimg.com/originals/28/f0/04/28f0044496e3832ff5dcdf624284dc63.gif');
+  background-size: 100%;
+  color: whitesmoke;
+  font-family: monospace;
+  height: 80vh
+}
+
+a {
+  text-decoration: none;
+  color: black; 
+}
+
+a:hover {
+  text-decoration: underline;
+  font-size: 22px
+}
+
+.menu {
+  background-color: whitesmoke; 
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.site-title,
+.sub-title {
+  text-align: center 
+}
+
+.sub-title {
+  font-style: italic;
+  font-size: 23px
+}
+
+.site-title {
+  font-size: 27px
+}
+
+li {
+  font-size: 19px
+}
