@@ -1,9 +1,7 @@
-body {
-  background-image: url('https://i.pinimg.com/originals/28/f0/04/28f0044496e3832ff5dcdf624284dc63.gif');
-  background-size: 100%;
-  color: whitesmoke;
-  font-family: monospace;
-  height: 80vh
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: box-border;
 }
 
 a {
@@ -13,20 +11,43 @@ a {
 
 a:hover {
   text-decoration: underline;
-  font-size: 22px
+  font-size: 4vh
+}
+
+body {
+  background-color: black;
+  background-size: 100%;
+  color: whitesmoke;
+  font-family: monospace;
+  height: 90vh
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
-  background-color: whitesmoke; 
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  top:0px
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.menu li {
+  list-style: none;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
-}
-
-.menu li {
-  list-style: none;
 }
 
 .site-title,
@@ -36,13 +57,23 @@ nav {
 
 .sub-title {
   font-style: italic;
-  font-size: 23px
+  font-size: 5vh;
 }
 
 .site-title {
-  font-size: 27px
+  font-size: 7vh;
 }
 
 li {
-  font-size: 19px
+  font-size: 3.5vh
+}
+
+.img-portifolio {
+  heigth: 60vh;
+  width: 60vh;
+}
+
+section {
+  font-size: 3vh;
+  text-align: center;
 }
