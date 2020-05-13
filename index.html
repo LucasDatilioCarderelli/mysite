@@ -1,36 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LucasDatilioCarderelli_site</title>
-  <link rel="stylesheet" href="./style.css">
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lucas Datilio Carderelli</title>
+	
+	<script src="https://kit.fontawesome.com/c54e6ff457.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<header>
-  <nav class='menu'
-    <ul>
-      <li><a href='#'>Sobre</a></li>
-      <li><a href='#'>Portifólio</a></li>
-      <li><a href='#'>Contato</a></li>
-    </ul>
-  </nav>
-  <div>
-    <h1 class='site-title'> Lucas Datilio Carderelli </h1>
-    <h2 class='sub-title'> Estudante de Data Science </h2>
-  </div>
-</header>
+  <a name="Sobre" id="Sobre"></a>
+	<header>
+		<nav class="menu">
+			<ul>
+				<li><a href="#Sobre">Sobre</a></li>
+				<li><a href="#Portfólio">Portfólio</a></li>
+				<li><a href="#Contato">Contato</a></li>
+			</ul>
+		</nav>
+		<div>
+			<h1 class="site-title">Lucas Datilio Carderelli</h1>
+			<h2 class="site-subtitle">Estudante de Data Science</h2>
+    </div>
+	</header>
+	<section class="portfolio">
+    <a name="Portfólio" id="Portfólio"></a>
+		<h2 class="índice">Portfólio</h2>
+		<div class="grid">
+			<figure>
+        <a href="https://colab.research.google.com/github/LucasDatilioCarderelli/-QuarentenaDados/blob/master/_QuarentenaDados_Desafio_Final___LucasDC.ipynb"><img class="img-portfolio" src="./img/quarentenadados.png" alt="#QuarentenaDados">
+				<figcaption>#QuarentenaDados</figcaption></a>
+      </figure>
+      <figure>
+				<img class="img-portfolio" src="./img/quarentenadev.png" alt=">#QuarentenaDev">
+				<figcaption>#QuarentenaDev</figcaption>
+			</figure>
+			<figure>
+				<img class="img-portfolio" src="./img/poke-stats.jpg" alt=">Pokemons Estatística">
+				<figcaption>Poké-Stats</figcaption>
+      </figure>
+		</div>
+	</section>
+	<section class="contato">
+    <a name="Contato" id="Contato"></a>
+		<h2 class="índice">Contato</h2>
 
-<section>
-  <h2>Portfólio</h2>
-  <figure>
-    <img class="img-portifolio" src="https://i.pinimg.com/originals/28/f0/04/28f0044496e3832ff5dcdf624284dc63.gif" alt="Working in Progressing">
-    <figcaption>Working in progress</figcaption>
-  </figure>
-</section>
-<!-- partial -->
-  
+		<div class="grid icons">
+			<a href="https://github.com/LucasDatilioCarderelli">
+				<i class="fab fa-github"></i>
+			</a>
+			<a href="https://www.linkedin.com/in/lucasdatiliocarderelli/">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			<a href="mailto:llucascarderelli@gmail.com">
+				<i class="fas fa-envelope"></i>
+			</a>
+		</div>
+  </section>
 </body>
 </html>
