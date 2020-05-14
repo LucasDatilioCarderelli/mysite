@@ -81,6 +81,7 @@ header {
 .contato,
 .portfolio {
   padding: 1em;
+  min-height: 100vh;
 }
 
 .contato h2,
@@ -141,5 +142,5 @@ header {
 }
 
 .índice {
-  padding-top: 1.4em;
+  padding-top: 1.3em;
 }
