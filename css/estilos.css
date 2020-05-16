@@ -1,7 +1,8 @@
 * {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 a {
@@ -11,10 +12,11 @@ a {
 
 
 body {
-  background-image: url("../img/atom.gif");
-  height: auto 100vh;
   /*background-color: black;*/
-  font-family: "Roboto Mono", monospace;
+  background-image: url("../img/atom.gif");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  height: auto 100vh;
 }
 
 @media (min-width: 400px) {
@@ -35,6 +37,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 2em;
 }
 
 .menu {
@@ -58,8 +61,7 @@ header {
 .menu a:hover{
   background-color: black;
   color: whitesmoke;
-  text-decoration: underline;
-  font-size: 1.1em;
+  text-transform: uppercase;
 }
 
 .menu li {
@@ -77,6 +79,7 @@ header {
   line-height: 1em;
   margin-bottom: 20px;
   text-align: center;
+  text-shadow: 1px 1px 5px #1b00ff;
 }
 
 .site-subtitle {
@@ -87,15 +90,17 @@ header {
   font-size: 2em;
 }
 
+.sobre,
 .contato,
 .portfolio {
   padding: 1em;
   min-height: 100vh;
 }
 
+.sobre h2,
 .contato h2,
 .portfolio h2 {
-  color: white;
+  color: whitesmoke;
   font-size: 2.2em;
   margin-bottom: .5em;
 }
@@ -117,7 +122,7 @@ header {
 .grid {
  color: silver;
  display: grid;
- gap: 2em;
+ gap: 2.5em;
  align-content: center;
  justify-content: center;
  text-align: center;
@@ -137,13 +142,14 @@ header {
 
 .portfolio figcaption {
   font-weight: bold;
+  font-size: 1.2em;
 }
 
 .img-portfolio {
   border-radius: 10px;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
-  width: 180px;
+  width: 190px;
   transition: transform 500ms;
 }
 
@@ -151,15 +157,45 @@ header {
   transform: scale(1.1) rotate(2deg);
 }
 
-.icons a {
+.icons i {
   color: white;
   font-size: 6em;
+  
 }
 
 .índice {
   padding-top: 1.3em;
+  text-shadow: 1px 1px 5px #1b00ff;
 }
 
 .contato a:hover {
   text-shadow: 0px 0px 8px whitesmoke;
+}
+
+.sobre h3 {
+  color: whitesmoke;
+}
+
+.img-sobre {
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  height: 190px;
+  width: 190px;
+}
+
+.back h3{
+  text-align: center;
+  font-size: 2em;
+}
+
+.sobre div {
+  padding: 1.5em;
+  text-align: center;
+}
+
+@media (max-width: 370px) {
+  .img-sobre {
+    float: none;
+  }
 }
