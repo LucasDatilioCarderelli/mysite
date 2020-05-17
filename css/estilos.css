@@ -158,9 +158,9 @@ section {
 
 .img-portfolio {
   border-radius: 10px;
-  height: 190px;
+  height: 200px;
   object-fit: cover;
-  width: 190px;
+  width: 200px;
   transition: transform 500ms;
 }
 
@@ -247,8 +247,8 @@ section {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, .7);
-  height: 190px;
-  width: 190px;
+  height: 200px;
+  width: 200px;
   transform: rotateY(180deg);
 }
 
