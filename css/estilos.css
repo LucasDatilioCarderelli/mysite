@@ -1,3 +1,5 @@
+/* Corpo */
+
 * {
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
@@ -10,7 +12,6 @@ a {
   color: whitesmoke;
 }
 
-
 body {
   background-image: url("../img/atom.gif");
   background-attachment: fixed;
@@ -20,15 +21,17 @@ body {
 
 @media (min-width: 400px) {
   body {
-    font-size: 18px;
+      font-size: 18px;
   }
 }
 
 @media (min-width: 600px) {
   body {
-    font-size: 22px;
+      font-size: 22px;
   }
 }
+
+/* Cabeçalho */
 
 header {
   min-height: 100vh;
@@ -57,7 +60,7 @@ header {
   transition: background-color 0.7s, color 0.7s, font-size 0.7s;
 }
 
-.menu a:hover{
+.menu a:hover {
   background-color: black;
   color: whitesmoke;
   text-transform: uppercase;
@@ -72,6 +75,8 @@ header {
   justify-content: space-around;
 }
 
+/* Titulo */
+
 .title {
   opacity: 0;
   animation: 1s ease 500ms animatitle forwards;
@@ -82,20 +87,17 @@ header {
     transform: scale(0.5) translateY(0vh);
     opacity: 0;
   }
+  
   to {
     transform: scale(1) translateY(0);
     opacity: 1;
   }
 }
 
-@media (max-width: 360px){
-  .title{
+@media (max-width: 360px) {
+  .title {
     font-size: 0.9em;
   }
-}
-
-section {
-  display: block;
 }
 
 .site-title {
@@ -115,73 +117,21 @@ section {
   font-size: 2em;
 }
 
-.sobre,
-.contato,
-.portfolio {
+/* Sobre */
+
+section {
+  display: block;
+}
+
+.sobre, .contato, .portfolio {
   padding: 1em;
   min-height: 100vh;
 }
 
-.sobre h2,
-.contato h2,
-.portfolio h2 {
+.sobre h2, .contato h2, .portfolio h2 {
   color: whitesmoke;
   font-size: 2.2em;
-  margin-bottom: .5em;
-}
-
-.grid {
-  display: grid;
-  gap: 4em;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-}
-
-@media (min-width: 560px) {
-  .grid {
-    grid-template-columns: 200px 200px;
-  }
-}
-
-@media (min-width: 940px) {
-   .grid {
-    grid-template-columns: repeat(4, 200px);
-    height: calc(100vh - 8em - 48px);
-  }
-}
-
-.portfolio figcaption {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.img-portfolio {
-  border-radius: 10px;
-  height: 200px;
-  object-fit: cover;
-  width: 200px;
-  transition: transform 500ms;
-}
-
-/*.img-portfolio:hover {
-  transform: scale(1.1) rotate(2deg);
-}*/
-
-.icons i {
-  color: white;
-  font-size: 6em;
-  
-}
-
-.índice {
-  padding-top: 1.2em;
-  text-shadow: 1px 1px 5px #1b00ff;
-}
-
-.back h3:hover, 
-.contato a:hover {
-  text-shadow: 0px 0px 8px whitesmoke;
+  margin-bottom: 1em;
 }
 
 .sobre h3 {
@@ -204,17 +154,51 @@ section {
   margin: 1.2em;
 }
 
-@media (max-width: 490px){
+@media (max-width: 490px) {
   .img-sobre {
     clip-path: polygon(50% 15%, 100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
     float: none;
   }
 }
 
-.back h3{
+/* Portfólio */
+
+.grid {
+  display: grid;
+  gap: 4em;
+  align-content: center;
+  justify-content: center;
   text-align: center;
-  font-size: 2em;
-  padding-bottom: 1.2em;
+}
+
+@media (min-width: 560px) {
+  .grid {
+    grid-template-columns: 200px 200px;
+  }
+}
+
+@media (min-width: 940px) {
+  .grid {
+    grid-template-columns: repeat(4, 200px);
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figcaption {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.sobre a, .portfolio figcaption:hover {
+  text-decoration: underline;
+}
+
+.img-portfolio {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+  transition: transform 500ms;
 }
 
 .flip-card {
@@ -232,8 +216,7 @@ section {
   transition: transform 2s;
 }
 
-.card-front, 
-.card-back {
+.card-front, .card-back {
   backface-visibility: hidden;
   left: 0;
   position: absolute;
@@ -254,4 +237,45 @@ section {
 
 .card h3 {
   padding: 1em;
+}
+
+.card-back h3 a {
+  text-decoration: underline;
+  color: black;
+}
+
+.boracorrer .img-portfolio {
+  object-position: 15%;
+}
+
+/* Contato */
+
+.icons i {
+  color: white;
+  font-size: 6em;
+}
+
+.índice {
+  padding-top: 1.2em;
+  text-shadow: 1px 1px 5px #1b00ff;
+}
+
+/* Retorno */
+
+.back a:hover, .contato a:hover {
+  text-shadow: 0px 0px 8px whitesmoke;
+}
+
+.back img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.back {
+  text-align: center;
+  font-size: 1.8em;
 }
