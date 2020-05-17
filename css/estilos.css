@@ -12,11 +12,10 @@ a {
 
 
 body {
-  /*background-color: black;*/
   background-image: url("../img/atom.gif");
   background-attachment: fixed;
   background-repeat: repeat;
-  height: auto 100vh;
+  height: 100vh;
 }
 
 @media (min-width: 400px) {
@@ -32,7 +31,7 @@ body {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,6 +72,32 @@ header {
   justify-content: space-around;
 }
 
+.title {
+  opacity: 0;
+  animation: 1s ease 500ms animatitle forwards;
+}
+
+@keyframes animatitle {
+  from {
+    transform: scale(0.5) translateY(0vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 360px){
+  .title{
+    font-size: 0.9em;
+  }
+}
+
+section {
+  display: block;
+}
+
 .site-title {
   color: whitesmoke;
   font-size: 4em;
@@ -105,38 +130,24 @@ header {
   margin-bottom: .5em;
 }
 
-
-@media (min-width: 400px) {
-  .contato,
-  .portfolio {
-    padding: 3em 2em 2em;
-    height: 100vh;
-  }
-  
-  .grid {
-    grid-template-columns: 200px 200px;
-    height: calc(100vh - 4.5em - 75px);
-  }
+.grid {
+  display: grid;
+  gap: 4em;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.grid {
- color: silver;
- display: grid;
- gap: 2.5em;
- align-content: center;
- justify-content: center;
- text-align: center;
+@media (min-width: 560px) {
+  .grid {
+    grid-template-columns: 200px 200px;
+  }
 }
 
 @media (min-width: 940px) {
-  .contato,
-  .portfolio {
-    padding: 2em;
-  }
-
    .grid {
     grid-template-columns: repeat(4, 200px);
-    height: calc(100vh - 8em - 75px);
+    height: calc(100vh - 8em - 48px);
   }
 }
 
@@ -153,9 +164,9 @@ header {
   transition: transform 500ms;
 }
 
-.img-portfolio:hover {
+/*.img-portfolio:hover {
   transform: scale(1.1) rotate(2deg);
-}
+}*/
 
 .icons i {
   color: white;
@@ -164,38 +175,83 @@ header {
 }
 
 .índice {
-  padding-top: 1.3em;
+  padding-top: 1.2em;
   text-shadow: 1px 1px 5px #1b00ff;
 }
 
+.back h3:hover, 
 .contato a:hover {
   text-shadow: 0px 0px 8px whitesmoke;
 }
 
 .sobre h3 {
   color: whitesmoke;
+  padding: 1.3em;
+  text-align: justify;
+}
+
+.sobre div {
+  text-align: center;
 }
 
 .img-sobre {
-  border-radius: 50%;
+  clip-path: polygon(100% 0%, 80% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   object-fit: cover;
   float: right;
-  height: 190px;
-  width: 190px;
+  height: 250px;
+  width: 250px;
+  object-position: top left;
+  margin: 1.2em;
+}
+
+@media (max-width: 490px){
+  .img-sobre {
+    clip-path: polygon(50% 15%, 100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+    float: none;
+  }
 }
 
 .back h3{
   text-align: center;
   font-size: 2em;
+  padding-bottom: 1.2em;
 }
 
-.sobre div {
-  padding: 1.5em;
-  text-align: center;
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
 }
 
-@media (max-width: 370px) {
-  .img-sobre {
-    float: none;
-  }
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s;
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-back {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  height: 190px;
+  width: 190px;
+  transform: rotateY(180deg);
+}
+
+.card h3 {
+  padding: 1em;
 }
