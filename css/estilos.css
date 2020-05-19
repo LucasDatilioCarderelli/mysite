@@ -13,6 +13,7 @@ a {
 }
 
 body {
+  background-color: black;
   background-image: url("../img/atom.gif");
   background-attachment: fixed;
   background-repeat: repeat;
@@ -57,7 +58,7 @@ header {
   padding-left: 30px;
   padding-right: 30px;
   text-decoration: none;
-  transition: background-color 0.7s, color 0.7s, font-size 0.7s;
+  transition: background-color 0.7s, color 0.7s;
 }
 
 .menu a:hover {
@@ -138,6 +139,28 @@ section {
   color: whitesmoke;
   padding: 1.3em;
   text-align: justify;
+}
+
+.barra{
+  animation: animabar 1100ms infinite;
+}
+
+@keyframes animabar {
+  0% {
+    opacity: 1;
+  }
+  
+  40% {
+    opacity: 1
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .sobre div {
@@ -273,6 +296,12 @@ section {
   position: fixed;
   bottom: 0;
   right: 0;
+  transition: width 0.7s, height 0.7s;
+}
+
+.back img:hover {
+  width: 60px;
+  height: 60px;
 }
 
 .back {
