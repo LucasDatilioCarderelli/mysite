@@ -1,3 +1,4 @@
+[![author](https://img.shields.io/badge/author-LucasDatilioCarderelli-blue.svg)](https://www.linkedin.com/in/lucasdatiliocarderelli)
 # MYSITE
 Meu site pessoal para portifólio e contato.
 <br><br>
